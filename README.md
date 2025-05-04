@@ -1,12 +1,21 @@
-# React + Vite
+# Pomodoro Timer Data Analysis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project includes a Pomodoro timer that utilizes the microcontroller, IMU, sensors, and other hardware to provide data to the LLM. 
+The LLM will receive the data and provide feedback to the user. 
 
-Currently, two official plugins are available:
+To download this file locally: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Requirements 
+- React
+- Vite
+  
+Run `git clone https://github.com/alexanderhu77/IDEA_Hacks_2025.git` to download to your local machine. 
 
-## Expanding the ESLint configuration
+Go to the directory `cd IDEA_Hacks_2025` 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Do `npm install` 
+
+And then run it. `npm run dev`
+
+The project will be run on the local server. 
+Please copy the link that popped up after the last command line and paste it in the browser to view it. 
