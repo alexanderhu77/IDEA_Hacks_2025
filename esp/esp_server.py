@@ -25,7 +25,7 @@ def read_serial_loop():
         try:
             line = ser.readline().decode("utf-8").strip()
             if line:
-                print(f"Received from ESP32: {line}")
+                print(f"{line}")
                 with log_lock:
                     esp32_log.append(line)
                     if len(esp32_log) > 20:  # Keep last 20 lines max
