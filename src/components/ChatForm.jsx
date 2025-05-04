@@ -25,9 +25,15 @@ const ChatForm = ({chatHistory, setChatHistory, generateBotResponse}) => {
         };
 
     return (
-        <form action= "#" className = "chat-form" onSubmit={handleFormSubmit}>
-            <input ref={inputRef} type = "text" className='message-input' required placeholder='Message here...' />
-            <button className='material-symbols-rounded'>Send</button>
+        <form className="chat-form" onSubmit={handleFormSubmit}>
+            <input
+            ref={inputRef}
+            type="text"
+            className="message-input"
+            required
+            placeholder="Message here..."
+            />
+            <button className="material-symbols-rounded">Send</button>
         </form>
     );
 }; 

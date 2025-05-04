@@ -83,7 +83,7 @@ def main():
     Main function to connect to the ESP32 and read data.
     """
     # esp32_port = find_esp32_port()
-    esp32_port = "/dev/cu.ESP32-3351"
+    esp32_port = "COM11"
     if not esp32_port:
         print("ESP32 port not found.  Exiting.")
         return
@@ -96,10 +96,11 @@ def main():
     try:
         while True:
             data = read_from_esp32(ser)
+            ser.flush()
             if data:
                 # Process the data as needed
                 pass
-            time.sleep(0.1)
+       #     time.sleep(0.1)
 
     except KeyboardInterrupt:
         print("Program interrupted by user.")
