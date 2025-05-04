@@ -40,7 +40,7 @@ const App = () => {
     
     // Combine ESP32 data with the user's last message in the history
     const userMessage = history[history.length - 1]?.parts[0].text || "[No user message]";
-    const combinedMessage = `${userMessage}\n\nESP32 Sensor Data:\n${espData}`;
+    const combinedMessage = `Respond concisely and include only actionable steps to better study habits. Make some references to the data in a human way to actionable steps. Do not use the word ESP32, but you may use references to how much time the user spending doing a certain task like studying. You must suggest relations to the data that are suboptimal.\n\nSensor Info:\n${espData}\n\nUser Question:\n${userMessage}`;
 
     // Add the combined message to the history
     const updatedHistory = [...history, { role: 'user', parts: [{ text: combinedMessage }] }];
