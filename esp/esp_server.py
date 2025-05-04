@@ -2,10 +2,11 @@ from flask import Flask, jsonify
 import serial
 import threading
 import time
-from flask_cors import CORS  
+from flask_cors import CORS
+
 app = Flask(__name__)
 
-SERIAL_PORT = "COM11"
+SERIAL_PORT = "/dev/cu.ESP32_3352"
 BAUDRATE = 115200
 READ_TIMEOUT = 5
 
@@ -16,6 +17,7 @@ CORS(app)
 esp32_log = []
 log_lock = threading.Lock()
 ser = None
+
 
 def read_serial_loop():
     global ser
@@ -33,10 +35,12 @@ def read_serial_loop():
         except Exception as e:
             print(f"[Serial Read Error] {e}")
 
+
 @app.route("/esp32-data", methods=["GET"])
 def get_esp32_data():
     with log_lock:
         return jsonify({"data": "\n".join(esp32_log)})
+
 
 if __name__ == "__main__":
     try:
