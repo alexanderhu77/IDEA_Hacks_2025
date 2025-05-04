@@ -1,7 +1,7 @@
 # Modified Pomodoro Timer
 
 This project includes a Pomodoro timer that utilizes the microcontroller, IMU, and other hardware to provide data to the LLM. 
-The LLM will receive the data and provide feedback to the user. 
+The LLM will receive the data and provide feedback to the user. This project was created between 05/02/2025 21:00 and 05/04/2025 09:00 Pacific Standard Time. 
 
 # Requirements 
 - React
