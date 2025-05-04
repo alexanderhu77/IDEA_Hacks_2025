@@ -1,4 +1,4 @@
-# Pomodoro Timer Data Analysis
+# Modified Pomodoro Timer
 
 This project includes a Pomodoro timer that utilizes the microcontroller, IMU, and other hardware to provide data to the LLM. 
 The LLM will receive the data and provide feedback to the user. 
