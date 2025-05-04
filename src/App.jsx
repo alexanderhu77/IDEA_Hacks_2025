@@ -4,7 +4,6 @@ import ChatMessage from "./components/ChatMessage";
 
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
-    
 
   const generateBotResponse = async (history) => {
 
@@ -45,14 +44,12 @@ const App = () => {
   };
 
   return(
-    <div>
+    <div className = "chat-body">
       <div className = "chat-history"> 
         {chatHistory.map((chat, index) => (
           <ChatMessage key ={index} chat={chat}/> 
         ))
         }
-      
-
       </div>
       <div className= "chat-bot">
         <ChatForm chatHistory = {chatHistory} setChatHistory = {setChatHistory} generateBotResponse = {generateBotResponse}/>
